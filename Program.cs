@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +16,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
             int myStringAsInt = Convert.ToInt32(myString); //watch me cast from string to int
 
             //MAIN:  NUMBER CONVERSION PROGRAM
-
+            Console.WriteLine(numberConversion(210, 2));
             //CODE GOES HERE
         }
 
@@ -25,8 +25,9 @@ namespace Y9_DEC_TO_BIN_SKELETON
         static string numberConversion(int number, int numberbase)
         {
             //CODE GOES HERE
+            int calc = number + numberbase;
+            string result = calc.ToString();
+            string text = "Return ";
+            string newString = text + result;
 
-            return result; //REMOVE THE RED LINE!
-        }
-    }
-}
+            return newString; //REMOVE THE RED LINE!
