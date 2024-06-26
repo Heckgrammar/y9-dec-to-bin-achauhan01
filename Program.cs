@@ -32,20 +32,25 @@ namespace Y9_DEC_TO_BIN_SKELETON
 
             return newString; //REMOVE THE RED LINE!
 
-                        bool odd = true;
-            int remainder = 0;
-            Console.WriteLine("Please enter a denary number: ");
-            int denaryNum = Convert.ToInt32(Console.ReadLine());
-            while (odd == true)
-                if ((denaryNum % 2 == 1) & (denaryNum >= 2))
-                {
-                    remainder = 1;
-                    Console.WriteLine(remainder);
-                }
-                else
-                {
-                    remainder = 0;
-                    Console.Write(remainder);
-                    denaryNum = (denaryNum / 2);
-                }
+bool loop = true;
+int remainder = 0;
+Console.WriteLine("Please enter a whole denary number: ");
+int denaryNum = Convert.ToInt32(Console.ReadLine());
+if (denaryNum >= 1)
+{
+    loop = true;
+}
+while (loop == true)
+if ((denaryNum % 2 == 1))
+{
+    remainder = 1;
+    Console.WriteLine(Convert.ToString(remainder));
+    denaryNum = denaryNum / 2 - 1;
+}
+if ((denaryNum % 2 == 0))
+{
+    remainder = 0;
+    Console.WriteLine(Convert.ToString(remainder));
+    denaryNum = (denaryNum / 2);
+}
         }
