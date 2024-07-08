@@ -31,27 +31,16 @@ namespace Y9_DEC_TO_BIN_SKELETON
             string newString = text + result;
 
             return newString; //REMOVE THE RED LINE!
-
-bool loop = true;
-int remainder = 0;
-Console.WriteLine("Please enter a whole denary number: ");
-int denaryNum = Convert.ToInt32(Console.ReadLine());
-while (loop == true)
-if (denaryNum >= 1)
-{
-    loop = true;
-}
-    if ((denaryNum % 2 == 1))
-    {
-        remainder = remainder + 1;
-        Console.Write(Convert.ToString(remainder));
-        denaryNum = denaryNum / 2;
-        denaryNum = denaryNum - 1;
-    }
-if ((denaryNum % 2 == 0))
-{
-    remainder = 0;
-    Console.Write(Convert.ToString(remainder));
-    denaryNum = (denaryNum / 2);
-}
+        }
+        
+        int remainder = 0;
+        Console.WriteLine("Please enter a denary number within the range of 1-256: ");
+        int denaryNum = int.Parse(Console.ReadLine());
+        while (denaryNum <= 256 && denaryNum >= 1)
+        {
+            remainder = denaryNum % 2;
+            denaryNum = denaryNum / 2;
+            string binaryNum;
+            binaryNum = remainder.ToString() + binaryNum;
+            Console.WriteLine("Your binary number is: " + binaryNum);
         }
