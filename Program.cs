@@ -36,11 +36,11 @@ bool loop = true;
 int remainder = 0;
 Console.WriteLine("Please enter a whole denary number: ");
 int denaryNum = Convert.ToInt32(Console.ReadLine());
+while (loop == true)
 if (denaryNum >= 1)
 {
     loop = true;
 }
-while (loop == true)
     if ((denaryNum % 2 == 1))
     {
         remainder = remainder + 1;
