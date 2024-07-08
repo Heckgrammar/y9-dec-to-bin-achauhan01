@@ -41,16 +41,17 @@ if (denaryNum >= 1)
     loop = true;
 }
 while (loop == true)
-if ((denaryNum % 2 == 1))
-{
-    remainder = 1;
-    Console.WriteLine(Convert.ToString(remainder));
-    denaryNum = denaryNum / 2 - 1;
-}
+    if ((denaryNum % 2 == 1))
+    {
+        remainder = remainder + 1;
+        Console.Write(Convert.ToString(remainder));
+        denaryNum = denaryNum / 2;
+        denaryNum = denaryNum - 1;
+    }
 if ((denaryNum % 2 == 0))
 {
     remainder = 0;
-    Console.WriteLine(Convert.ToString(remainder));
+    Console.Write(Convert.ToString(remainder));
     denaryNum = (denaryNum / 2);
 }
         }
