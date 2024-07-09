@@ -33,14 +33,14 @@ namespace Y9_DEC_TO_BIN_SKELETON
             return newString; //REMOVE THE RED LINE!
         }
         
-        int remainder = 0;
-        Console.WriteLine("Please enter a denary number within the range of 1-256: ");
-        int denaryNum = int.Parse(Console.ReadLine());
-        while (denaryNum <= 256 && denaryNum >= 1)
-        {
-            remainder = denaryNum % 2;
-            denaryNum = denaryNum / 2;
-            string binaryNum = " ";
-            binaryNum = remainder.ToString() + binaryNum;
-            Console.Write(binaryNum);
-        }
+        int remainder = 0; 
+Console.WriteLine("Please enter a denary number within the range of 1-256: ");
+int denaryNum = int.Parse(Console.ReadLine()); //converts the string to an integer
+while (denaryNum <= 256 && denaryNum >= 1) //makes sure number is in the range
+{
+    remainder = denaryNum % 2; //finds module of denaryNum (remainder of its division by 2)
+    denaryNum = denaryNum / 2;
+    string binaryNum = string.Empty; //declares empty string
+    binaryNum = remainder.ToString(); //converts remainder to a string so that it can be outputted
+    Console.Write(binaryNum);
+}
