@@ -40,7 +40,7 @@ namespace Y9_DEC_TO_BIN_SKELETON
         {
             remainder = denaryNum % 2;
             denaryNum = denaryNum / 2;
-            string binaryNum;
+            string binaryNum = " ";
             binaryNum = remainder.ToString() + binaryNum;
-            Console.WriteLine("Your binary number is: " + binaryNum);
+            Console.WriteLine(binaryNum);
         }
